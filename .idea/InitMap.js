@@ -86,6 +86,10 @@ function initMap() {
   });
 
   setMarkers(map, 11);
+
+  //showRewards(marker);
+
+
 }
 
 function setMarkers(map, time) {
@@ -118,7 +122,22 @@ function setMarkers(map, time) {
       map: map,
       /*title:"Hanauma Bay",*/
     });
+
+    marker.addListener('click', function() {
+      //console.log("clicked");
+      //console.log(marker);
+    });
   }
 }
 
-/*console.log(getColorForPercentage(100));*/
+/*
+function showRewards(marker) {
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Hi'
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(marker.get('map'), marker);
+  });
+}
+*/
