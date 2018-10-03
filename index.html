@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Direct Aloha Map</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+  <link rel="stylesheet" href=".idea/style.css">
+
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src=".idea/InitMap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscTwcpOOEBQSANv0n3ctflHiVAhSN-oo&callback=initMap"
+          async defer>
+
+  </script>
+
+ <!--HANAUMA BAY ON A WEDNESDAY EXAMPLE>
+
+<div jstcache="868" class="section-popular-times-graph section-popular-times-graph-visible"
+     jsan="7.section-popular-times-graph,7.section-popular-times-graph-visible">
+  <div jstcache="869" class="section-popular-times-message" style="display:none"><span jstcache="870"></span>—<span>pick another day</span>
+  </div>
+  <div jstcache="871" class="section-popular-times-message" style="display:none"><span jstcache="872"></span></div>
+  <div aria-label="0% busy at 6 AM." role="img" jstcache="873" jsinstance="0"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">6a
+    </div>
+  </div>
+  <div aria-label="17% busy at 7 AM." role="img" jstcache="873" jsinstance="1" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:58.1px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="45% busy at 8 AM." role="img" jstcache="873" jsinstance="2" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:38.5px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="77% busy at 9 AM." role="img" jstcache="873" jsinstance="3"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:16.1px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">9a
+    </div>
+  </div>
+  <div aria-label="88% busy at 10 AM." role="img" jstcache="873" jsinstance="4" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:8.400000000000006px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="75% busy at 11 AM." role="img" jstcache="873" jsinstance="5" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-current-value" style="top:17.5px"
+         jsan="7.section-popular-times-value,7.section-popular-times-current-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="65% busy at 12 PM." role="img" jstcache="873" jsinstance="6"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:24.5px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">12p
+    </div>
+  </div>
+  <div aria-label="67% busy at 1 PM." role="img" jstcache="873" jsinstance="7" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:23.1px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="67% busy at 2 PM." role="img" jstcache="873" jsinstance="8" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:23.1px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="50% busy at 3 PM." role="img" jstcache="873" jsinstance="9"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:35px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">3p
+    </div>
+  </div>
+  <div aria-label="27% busy at 4 PM." role="img" jstcache="873" jsinstance="10" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:51.1px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="10% busy at 5 PM." role="img" jstcache="873" jsinstance="11" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:63px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="2% busy at 6 PM." role="img" jstcache="873" jsinstance="12"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value" style="top:68.6px"
+         jsan="7.section-popular-times-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">6p
+    </div>
+  </div>
+  <div aria-label="0% busy at 7 PM." role="img" jstcache="873" jsinstance="13" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="0% busy at 8 PM." role="img" jstcache="873" jsinstance="14" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="0% busy at 9 PM." role="img" jstcache="873" jsinstance="15"
+       class="section-popular-times-bar section-popular-times-bar-with-label"
+       jsan="7.section-popular-times-bar,7.section-popular-times-bar-with-label,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden">9p
+    </div>
+  </div>
+  <div aria-label="0% busy at 10 PM." role="img" jstcache="873" jsinstance="16" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+  <div aria-label="0% busy at 11 PM." role="img" jstcache="873" jsinstance="*17" class="section-popular-times-bar"
+       jsan="7.section-popular-times-bar,0.aria-label,0.role">
+    <div jstcache="874" class="section-popular-times-value section-popular-times-zero-value" style="top:70px"
+         jsan="7.section-popular-times-value,7.section-popular-times-zero-value,5.top"></div>
+    <div jstcache="875" style="display:none"></div>
+    <div aria-hidden="true" jstcache="876" class="section-popular-times-label"
+         jsan="7.section-popular-times-label,0.aria-hidden"></div>
+  </div>
+</div-->
+
+</body>
+</html>
